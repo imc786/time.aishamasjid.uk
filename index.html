@@ -7,11 +7,148 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
 <link rel="stylesheet" href="assets/css/global.css" />
+<style>
+
+
+#slider, ul
+{
+	height: 200px;
+}
+
+#slider
+{
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+	width: 600px;
+}
+
+#slider li
+{
+	float: left;
+	position: relative;
+	width: 550px;
+	display: inline-block;
+	height: 496px;
+}
+
+#slider ul
+{
+	list-style: none;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 9000px;
+	transition: left .2s linear;
+	-moz-transition: left .2s linear;
+	-o-transition: left .2s linear;
+	-webkit-transition: left .2s linear;
+	margin-left: -25px;
+  font-family: open sans;
+  color: #white;
+}
+
+/*** Content ***/
+
+.slider-container
+{
+  color:white;
+	margin: 0 auto;
+	padding: 0;
+	width: 550px;
+  min-height: 496px;
+  vertical-align: middle;
+  text-align:center;
+}
+
+.slider-container h2
+{
+ 	color: white;
+}
+
+.slider-container  p
+{
+	font-weight: semi-bold;
+	line-height: 150%;
+}
+
+/*** target hooks ****/
+
+@-webkit-keyframes slide-animation {
+	0% {opacity:0;}
+	2% {opacity:1;}
+	20% {left:0px; opacity:1;}
+	22.5% {opacity:0.6;}
+	25% {left:-600px; opacity:1;}
+	45% {left:-600px; opacity:1;}
+	47.5% {opacity:0.6;}
+	50% {left:-1200px; opacity:1;}
+	70% {left:-1200px; opacity:1;}
+	72.5% {opacity:0.6;}
+	75% {left:-1800px; opacity:1;}
+	95% {opacity:1;}
+	98% {left:-1800px; opacity:0;} 
+	100% {left:0px; opacity:0;}
+}
+
+#slider ul
+{
+	-webkit-animation: slide-animation 20s infinite;
+}
+
+#slider ul:hover
+{
+	-moz-animation-play-state: paused;
+	-webkit-animation-play-state: paused;
+}
+</style>
 </head>
 
 <body>
 
-<section id="main"><img src="aisha-logo.png" alt="Aisha Masjid &amp; Islamic Centre"/></section>
+<section id="main"><div id="slider">
+<ul>
+  <li>
+  <div class="slider-container">
+  <p class="arabic-ayah"></p>
+  <p class="bangla-ayah"></p>
+  </div>
+  </li>
+  
+  
+    <li>
+    <div class="slider-container">
+	
+	<p>Please Turn Your Mobile off or Put it on Silent</p>
+  </div>
+  </li>
+    <li>
+    <div class="slider-container">
+	  <p class="arabic-ayah"></p>
+  <p class="bangla-ayah"></p>
+   </div>
+  </li>
+    <li>
+    <div class="slider-container">
+	  <p class="arabic-ayah"></p>
+  <p class="bangla-ayah"></p>
+  </div>
+  </li>
+   <li>
+    <div class="slider-container">
+	  <p class="arabic-ayah"></p>
+  <p class="bangla-ayah"></p>
+  </div>
+  </li>
+   <li>
+    <div class="slider-container">
+	  <p class="arabic-ayah"></p>
+  <p class="bangla-ayah"></p>
+</div>
+  </li>
+</ul>
+</div>
+</section>
 <section id="sidebar">You need JavaScript enabled to use this application.</section>
 <section id="prayerbar"></section>
 
@@ -27,6 +164,6 @@
 <script src="https://cdn.jsdelivr.net/npm/moment@latest/min/moment-with-locales.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/moment-hijri@latest/moment-hijri.min.js"></script>
 <script src="assets/js/time.js"></script>
-
+<script src="assets/js/script.js"></script>
 </body>
 </html>
