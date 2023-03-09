@@ -33,3 +33,4 @@ You can force a specific timestamp instead of using current live time by uncomme
 
 Aisha Masjid Prayer Timer
 Copyright (c) 2023 Imtiaz Chowdhury / Western Pixel
+Copyright (c) 2023 Shujaaul Islam
