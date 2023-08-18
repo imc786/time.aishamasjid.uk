@@ -4,15 +4,15 @@ body {
 }
 
 section#main {
-    background-color: var(--black);
+    background-color: var(--black20);
 }
 
 section#main img {
-    background: var(--blue);
+    opacity: 0.5;
 }
 
 section#prayerbar {
-    background-color: var(--blue);
+    background-color: var(--blue50);
 }
 
 /* Prayer elements */
@@ -22,7 +22,7 @@ section#prayerbar {
 }
 
 span.prayer.active {
-    background: var(--amber);
+    background: var(--amber60);
     color: var(--black);
 }
 
@@ -37,11 +37,11 @@ span.prayer.active svg {
 /* Sidebar tweaks on prayer elements */
 
 section#sidebar.iqamah {
-    background-color: var(--amber);
+    background-color: var(--amber60);
 }
 
 section#sidebar.salah {
-    background-color: var(--vivid-green-cyan);
+    background-color: var(--vivid-green-cyan50);
 }
 
 section#sidebar.iqamah, section#sidebar.salah {

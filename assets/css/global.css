@@ -1,16 +1,20 @@
 :root {
     --amber: #fcb900;
+    --amber60: rgba(252,185,0,0.6);
     --orange: #ff6900;
     --black: #000000;
+    --black20: rgba(0,0,0,0.2);
     --cyan-bluish-grey: #abb8c3;
     --white: #ffffff;
     --pale-pink: #f78da7;
     --vivid-red: #cf2e2e;
     --light-green-cyan: #7bdcb5;
     --vivid-green-cyan: #00d084;
+    --vivid-green-cyan50: rgba(0,208,132,0.5);
     --pale-cyan-blue: #8ed1fc;
     --vivid-cyan-blue: #0693e3;
     --blue: #0693e3;
+    --blue50: rgba(6,147,227,0.5);
     --vivid-purple: #9b51e0;
     --grey: #ccc;
     --white50: rgba(255,255,255,0.5);
@@ -51,6 +55,11 @@ h2 {
 
 * {
     box-sizing: border-box;
+}
+
+video {
+    width: 100%;
+    opacity: 0.2;
 }
 
 section {
