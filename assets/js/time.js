@@ -183,17 +183,17 @@ async function timeCalc() {
                   // Asr start
                   if (now < asriqamahmoment) { asr = ' active'; nextevent = 3, iqamah = 1, nexttime = asriqamahmoment; } else // Asr starts, before Iqamah
                     if (nowminus < asriqamahmoment) { asr = ' active'; nextevent = 3, iqamah = 0, salah = 1, nexttime = maghribmoment; } else // Asr Iqamah starts and shows for 10 minutes
-                      if (now < maghribmoment) { dhuhr = ''; asr = ' active'; nextevent = 4, iqamah = 0, salah = 0, nexttime = maghribmoment;  } else // after Asr Salah & before Maghrib
+                      if (now < maghribmoment) { asr = ' active'; nextevent = 4, iqamah = 0, salah = 0, nexttime = maghribmoment;  } else // after Asr Salah & before Maghrib
 
                   // Maghrib start
                   if (now < maghribiqamahmoment) { maghrib = ' active'; nextevent = 4, iqamah = 1, nexttime = maghribiqamahmoment; } else // Maghrib starts, before Iqamah (won't fire if same time)
                     if (nowminus < maghribiqamahmoment) { maghrib = ' active'; nextevent = 4, iqamah = 0, salah = 1, nexttime = ishamoment; } else // Maghrib starts and shows for 10 minutes
-                      if (now < ishamoment) { asr = ''; maghrib = ' active'; nextevent = 5, iqamah = 0, salah = 0, nexttime = ishamoment; } else // after Maghrib Salah & before Isha
+                      if (now < ishamoment) { maghrib = ' active'; nextevent = 5, iqamah = 0, salah = 0, nexttime = ishamoment; } else // after Maghrib Salah & before Isha
 
                         // Isha start
                         if (now < ishaiqamahmoment) { isha = ' active'; nextevent = 5, iqamah = 1, nexttime = ishaiqamahmoment; } else // Isha starts, before Iqamah
                           if (nowminus20 < ishaiqamahmoment) { isha = ' active'; nextevent = 5, iqamah = 0, salah = 1, nexttime = nextfajrmoment; } else // Isha starts and shows for 10 minutes
-                            if (now < nextfajrmoment) { maghrib = ''; isha = ' active'; nextevent = 6, iqamah = 0, salah = 0, nexttime = nextfajrmoment; } else { console.log('no match'); }
+                            if (now < nextfajrmoment) { isha = ' active'; nextevent = 6, iqamah = 0, salah = 0, nexttime = nextfajrmoment; } else { console.log('no match'); }
 
   // an override for showing Sunrise as the next countdown on the sidebar, while the event times are of Dhuhr
   let nextmoment = nextevent;
@@ -236,20 +236,7 @@ async function timeCalc() {
     </span><span class='prayer${sunrise}'>
       <span class='start'>${timestoday.sunrise.trim()}</span>
       <span class='event'>${event[1].en} | ${event[1].ar}</span>
-      <span class='iqamah'><svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="256" height="128" viewBox="0 0 256 128" preserveAspectRatio="xMidYMid meet" fill="#ffffff" stroke="none">
-        <g transform="translate(0,208) scale(0.1,-0.1)">
-          <path d="M1244 2026 c-17 -13 -19 -31 -24 -202 l-5 -188 -70 -12 c-94 -15
-          -195 -56 -285 -116 l-74 -49 -126 125 c-69 68 -135 127 -147 131 -32 9 -77
-          -36 -68 -68 4 -12 63 -78 131 -147 l125 -126 -50 -75 c-59 -88 -98 -186 -115
-          -284 l-12 -70 -188 -5 c-171 -5 -189 -7 -202 -24 -25 -34 -17 -64 23 -85 31
-          -16 2215 -16 2246 0 40 21 48 51 23 85 -13 17 -31 19 -202 24 l-188 5 -12 70
-          c-15 94 -56 195 -116 285 l-49 74 120 121 c139 140 149 156 126 191 -15 23
-          -31 29 -65 24 -8 -1 -72 -58 -141 -127 l-126 -125 -49 35 c-97 69 -221 120
-          -332 136 l-47 6 -5 188 c-5 172 -7 190 -24 203 -11 8 -27 14 -36 14 -9 0 -25
-          -6 -36 -14z m190 -526 c247 -63 439 -271 481 -522 l6 -38 -641 0 -641 0 6 38
-          c42 249 233 458 477 522 97 25 214 25 312 0z"/>
-        </g>
-      </svg></span>
+      <span class='iqamah'>--</span>
     </span><span class='prayer${dhuhr}'>
       <span class='start'>${timestoday.dhuhr.trim()}</span>
       <span class='event'>${event[2].en} | ${event[2].ar}</span>
