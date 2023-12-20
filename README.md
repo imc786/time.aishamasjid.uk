@@ -9,7 +9,7 @@ Prayer timer is a one-page web interface, intended to be shown on a 4K (3840x216
 
 ## Prerequisites
 
-1. Prayer start times are retrieved from [https://www.moonsighting.com/time_starttimes.php?year={year}&tz=Europe/London&lat=51.4548878&lon=-0.9365519&method=0&both=false&time=0](https://www.moonsighting.com/time_starttimes.php?year=2023&tz=Europe/London&lat=51.4548878&lon=-0.9365519&method=0&both=false&time=0) and then stored locally under `data/{year}.json`
+1. Prayer start times are retrieved from [https://www.moonsighting.com/time_json.php?year=2023&tz=Europe/London&lat=51.4548878&lon=-0.9365519&method=0&both=false&time=0](https://www.moonsighting.com/time_json.php?year=2023&tz=Europe/London&lat=51.4548878&lon=-0.9365519&method=0&both=false&time=0) and then stored locally under `data/{year}.json`
 
 2. Iqamah/Jama'at times are provided by Aisha Masjid & Islamic Centre, converted to JSON and stored locally under `data/jamaat/{year}.json`
 
