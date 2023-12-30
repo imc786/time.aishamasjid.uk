@@ -51,10 +51,11 @@ async function timeCalc() {
   if(timestoday.length != 0) { timestoday = timestoday[0].times; } 
 
   // find today's Jama'at times from the array
-  let jamaattoday = jamaat.times.filter(obj => {
+  let jamaattoday = jamaat.filter(obj => {
     return obj.date === now.format('YYYY-MM-DD')
   });
-  if(jamaattoday.length != 0) { jamaattoday = jamaattoday[0].times; } 
+  
+  if(jamaattoday.length != 0) { jamaattoday = jamaattoday[0]; } 
 
   // find tomorrow's Fajr time to use after Isha
   let nextfajr = starttimes.times.filter(obj => {
@@ -63,10 +64,10 @@ async function timeCalc() {
   if(nextfajr.length != 0) { nextfajr = nextfajr[0].times.fajr } else { nextfajr = timestoday.fajr }
 
   // find tomorrow's Fajr Iqamah time to use after Isha
-  let nextfajriqamah = jamaat.times.filter(obj => {
+  let nextfajriqamah = jamaat.filter(obj => {
     return obj.date == moment(now).locale('en-gb').add(1, 'day').format('YYYY-MM-DD')
   });
-  if(nextfajriqamah.length != 0) { nextfajriqamah = nextfajriqamah[0].times.fajr } else { nextfajriqamah = jamaattoday.fajr }
+  if(nextfajriqamah.length != 0) { nextfajriqamah = nextfajriqamah[0].fajr } else { nextfajriqamah = jamaattoday.fajr }
   let nextfajrmoment = moment(tomorrow + nextfajr, 'YYYY-MM-DD HH:mm');
 
   if (typeof(jamaattoday.maghrib) === "undefined") { jamaattoday.maghrib = timestoday.maghrib.trim() } // if there's no Maghrib Jama'at time, use the start time
